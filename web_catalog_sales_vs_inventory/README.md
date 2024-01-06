@@ -1,15 +1,16 @@
-Welcome to your new dbt project!
+This is a dimensional data modeling project using dbt.
 
-### Using the starter project
+the main files/folders are: 1 - models, 2 - snapshots, 3 - dbt_job, 4 - dbt_project
+1 - models:
+    There are 3 schemas: staging, intermediate, analytics(aka marts)
 
-Try running the following commands:
-- dbt run
-- dbt test
+    Final model are: fact table: weekly_sales_inventory
+                     dimension table: customer_dim
+2 - snapshot:
+    Uses check strategy to create snapshot "customer_snapshot" (base of final customer_dim model)
 
+3 - dbt_job.sh
+    Shell script of running the dbt job and adding log files
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+4 - dbt_project.yml
+    yaml file with generic model configs if not specified in the model's individual folder/file
