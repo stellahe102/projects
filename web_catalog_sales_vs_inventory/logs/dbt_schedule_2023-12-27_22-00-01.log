@@ -1,0 +1,46 @@
+[0m03:00:05  Running with dbt=1.7.3
+[0m03:00:06  Registered adapter: snowflake=1.7.1
+[0m03:00:06  Found 12 models, 4 tests, 1 snapshot, 9 sources, 0 exposures, 0 metrics, 805 macros, 0 groups, 0 semantic models
+[0m03:00:06  
+[0m03:00:15  Concurrency: 1 threads (target='dev')
+[0m03:00:15  
+[0m03:00:15  1 of 17 START sql view model staging.stg_tpcds__catalog_sales .................. [RUN]
+[0m03:00:17  1 of 17 OK created sql view model staging.stg_tpcds__catalog_sales ............. [[32mSUCCESS 1[0m in 2.71s]
+[0m03:00:17  2 of 17 START sql view model staging.stg_tpcds__customer ....................... [RUN]
+[0m03:00:22  2 of 17 OK created sql view model staging.stg_tpcds__customer .................. [[32mSUCCESS 1[0m in 4.58s]
+[0m03:00:22  3 of 17 START sql view model staging.stg_tpcds__customer_address ............... [RUN]
+[0m03:00:23  3 of 17 OK created sql view model staging.stg_tpcds__customer_address .......... [[32mSUCCESS 1[0m in 0.82s]
+[0m03:00:23  4 of 17 START sql view model staging.stg_tpcds__customer_demographics .......... [RUN]
+[0m03:00:25  4 of 17 OK created sql view model staging.stg_tpcds__customer_demographics ..... [[32mSUCCESS 1[0m in 1.82s]
+[0m03:00:25  5 of 17 START sql view model staging.stg_tpcds__date_dim ....................... [RUN]
+[0m03:00:26  5 of 17 OK created sql view model staging.stg_tpcds__date_dim .................. [[32mSUCCESS 1[0m in 1.13s]
+[0m03:00:26  6 of 17 START sql view model staging.stg_tpcds__household_demographics ......... [RUN]
+[0m03:00:27  6 of 17 OK created sql view model staging.stg_tpcds__household_demographics .... [[32mSUCCESS 1[0m in 1.16s]
+[0m03:00:27  7 of 17 START sql view model staging.stg_tpcds__income_band .................... [RUN]
+[0m03:00:28  7 of 17 OK created sql view model staging.stg_tpcds__income_band ............... [[32mSUCCESS 1[0m in 1.19s]
+[0m03:00:28  8 of 17 START sql view model staging.stg_tpcds__inventory ...................... [RUN]
+[0m03:00:29  8 of 17 OK created sql view model staging.stg_tpcds__inventory ................. [[32mSUCCESS 1[0m in 0.97s]
+[0m03:00:29  9 of 17 START sql view model staging.stg_tpcds__web_sales ...................... [RUN]
+[0m03:00:30  9 of 17 OK created sql view model staging.stg_tpcds__web_sales ................. [[32mSUCCESS 1[0m in 1.38s]
+[0m03:00:30  10 of 17 START snapshot intermediate.customer_snapshot ......................... [RUN]
+[0m03:00:41  10 of 17 OK snapshotted intermediate.customer_snapshot ......................... [[32mSUCCESS 0[0m in 10.17s]
+[0m03:00:41  11 of 17 START sql incremental model intermediate.int__daily_aggregated_sales .. [RUN]
+[0m03:00:48  11 of 17 OK created sql incremental model intermediate.int__daily_aggregated_sales  [[32mSUCCESS 2218[0m in 7.39s]
+[0m03:00:48  12 of 17 START sql incremental model analytics.customer_dim .................... [RUN]
+[0m03:00:56  12 of 17 OK created sql incremental model analytics.customer_dim ............... [[32mSUCCESS 100000[0m in 7.67s]
+[0m03:00:56  13 of 17 START test not_null_int__daily_aggregated_sales_item_sk ............... [RUN]
+[0m03:00:57  13 of 17 PASS not_null_int__daily_aggregated_sales_item_sk ..................... [[32mPASS[0m in 1.29s]
+[0m03:00:57  14 of 17 START test not_null_int__daily_aggregated_sales_warehouse_sk .......... [RUN]
+[0m03:00:58  14 of 17 PASS not_null_int__daily_aggregated_sales_warehouse_sk ................ [[32mPASS[0m in 1.16s]
+[0m03:00:58  15 of 17 START test not_null_int__daily_aggregated_sales_wk_num ................ [RUN]
+[0m03:00:59  15 of 17 PASS not_null_int__daily_aggregated_sales_wk_num ...................... [[32mPASS[0m in 0.65s]
+[0m03:00:59  16 of 17 START test not_null_int__daily_aggregated_sales_yr_num ................ [RUN]
+[0m03:00:59  16 of 17 PASS not_null_int__daily_aggregated_sales_yr_num ...................... [[32mPASS[0m in 0.65s]
+[0m03:00:59  17 of 17 START sql incremental model analytics.weekly_sales_inventory .......... [RUN]
+[0m03:01:11  17 of 17 OK created sql incremental model analytics.weekly_sales_inventory ..... [[32mSUCCESS 34[0m in 11.53s]
+[0m03:01:11  
+[0m03:01:11  Finished running 9 view models, 1 snapshot, 3 incremental models, 4 tests in 0 hours 1 minutes and 5.29 seconds (65.29s).
+[0m03:01:11  
+[0m03:01:11  [32mCompleted successfully[0m
+[0m03:01:11  
+[0m03:01:11  Done. PASS=17 WARN=0 ERROR=0 SKIP=0 TOTAL=17
