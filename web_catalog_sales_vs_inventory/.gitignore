@@ -1,0 +1,9 @@
+
+target/
+dbt_packages/
+logs/
+packages
+package_lock
+seeds/
+analyses/
+tests/

@@ -1,0 +1,4 @@
+version: 2
+model:
+  - name: customer_dim
+  - name: weekly_sales_inventory

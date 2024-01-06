@@ -1,0 +1,7 @@
+version: 2
+
+snapshots:
+  - name: customer_snapshot
+    materialized: snapshot
+    pre-hook: | 
+      TRUNCATE TABLE tpcds.intermediate.customer_snapshot;

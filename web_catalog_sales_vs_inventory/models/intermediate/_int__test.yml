@@ -1,0 +1,17 @@
+version: 2
+
+models: 
+  - name: int__daily_aggregated_sales
+    columns:
+      - name: warehouse_sk
+        tests: 
+           - not_null
+      - name: item_sk
+        tests: 
+           - not_null
+      - name: yr_num
+        tests: 
+           - not_null
+      - name: wk_num
+        tests: 
+           - not_null

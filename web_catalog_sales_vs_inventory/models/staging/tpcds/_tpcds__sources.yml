@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: tpcds
+    database: tpcds
+    schema: raw
+    tables:
+      - name: customer
+      - name: customer_address
+      - name: customer_demographics
+      - name: household_demographics
+      - name: income_band
+      - name: catalog_sales
+      - name: web_sales
+      - name: inventory
+      - name: date_dim
