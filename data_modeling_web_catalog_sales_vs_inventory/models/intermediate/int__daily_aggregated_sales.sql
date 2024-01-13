@@ -73,7 +73,7 @@ WITH
             from {{ ref('stg_tpcds__date_dim') }}
             where day_of_wk_num = 0)
     -- add the bow sk to the daily table
-SELECT 
+SELECT DISTINCT
     item_sk, 
     warehouse_sk, 
     sold_date_sk, 

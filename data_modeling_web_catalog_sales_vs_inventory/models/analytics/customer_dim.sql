@@ -1,13 +1,13 @@
 {{
     config (
         materialized = 'incremental',
-        unique_key = ['CUSTOMER_SK'],
+        unique_key = ['CUSTOMER_SK', 'START_DATE', 'END_DATE'],
         target_schema = 'analytics',
         target_database = 'tpcds'
     )
 }}
 -- pull custome attributes together
-SELECT 
+SELECT DISTINCT
     IC.SALUTATION AS SALUTATION,
     IC.PREFERRED_CUST_FLAG AS PREFERRED_CUST_FLAG,
     IC.FIRST_SALES_DATE_SK AS FIRST_SALES_DATE_SK,

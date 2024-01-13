@@ -24,11 +24,11 @@
             'BIRTH_YEAR',
             'BIRTH_DAY',
             'EMAIL_ADDRESS',
-            'FIRST_SHIPTO_DATE_SK']
+            'FIRST_SHIPTO_DATE_SK'] 
     )
 }}
 
-SELECT 
+SELECT DISTINCT
     SALUTATION,
     PREFERRED_CUST_FLAG,
     FIRST_SALES_DATE_SK,

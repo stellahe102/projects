@@ -99,7 +99,7 @@ WITH
                 AND inv.yr_num = sales.yr_num
     )
 
-SELECT 
+SELECT DISTINCT
     WAREHOUSE_SK,
     ITEM_SK,
     sold_date_bow_sk,
